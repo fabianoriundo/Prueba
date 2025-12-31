@@ -753,169 +753,54 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Estilos específicos para el menú de 6 ítems */
+/* ===== MENÚ DE 6 ÍCONOS – MOBILE SIN SCROLL ===== */
+
 .container-nav-ul {
-    display: flex;
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr);
     width: 100%;
-    padding: 10px 4px;
+    padding: 8px 4px;
     margin: 0;
-    gap: 4px;
-    justify-content: space-between;
-    overflow-x: hidden !important;
+    gap: 0;
+    overflow: hidden !important;
 }
 
-/* Eliminar cualquier scroll */
-.container-nav-ul::-webkit-scrollbar {
-    display: none;
-}
-
-.container-nav-ul {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Cada ítem ocupa el mismo ancho */
+/* Cada item ocupa exactamente 1/6 */
 .container-nav-ul li {
-    flex: 1 1 0;
-    min-width: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/* Estilos para los items del menú */
+/* Ítem del menú */
 .menu-item {
-    width: 100% !important;
-    max-width: 100px;
-    min-height: 90px;
-    padding: 8px 4px !important;
+    width: 100%;
+    height: 90px;
+    padding: 6px 2px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* Contenedor del icono */
-.menu-item .h-12 {
-    height: 40px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Ajustar tamaño de los SVG */
+/* Icono */
 .menu-item svg {
-    width: 32px !important;
-    height: 32px !important;
-    max-width: 100%;
-    max-height: 100%;
+    width: 30px !important;
+    height: 30px !important;
 }
 
-/* Texto debajo del icono */
+/* Texto */
 .menu-item span {
-    font-size: 0.7rem !important;
-    text-align: center;
-    line-height: 1.2;
+    font-size: 0.65rem !important;
+    line-height: 1.1;
     margin-top: 4px;
-    padding: 0 2px;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    text-align: center;
     white-space: nowrap;
 }
 
-/* Para pantallas muy pequeñas */
-@media (max-width: 360px) {
-    .menu-item {
-        min-height: 85px;
-        padding: 6px 3px !important;
-    }
-    
-    .menu-item .h-12 {
-        height: 35px !important;
-    }
-    
-    .menu-item svg {
-        width: 28px !important;
-        height: 28px !important;
-    }
-    
-    .menu-item span {
-        font-size: 0.65rem !important;
-    }
-}
-
-/* Para tablets pequeñas */
-@media (min-width: 481px) and (max-width: 768px) {
-    .menu-item {
-        max-width: 110px;
-        min-height: 100px;
-        padding: 10px 6px !important;
-    }
-    
-    .menu-item svg {
-        width: 36px !important;
-        height: 36px !important;
-    }
-    
-    .menu-item span {
-        font-size: 0.75rem !important;
-    }
-}
-
-/* Para tablets grandes */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .menu-item {
-        max-width: 130px;
-        min-height: 110px;
-    }
-    
-    .menu-item svg {
-        width: 40px !important;
-        height: 40px !important;
-    }
-    
-    .menu-item span {
-        font-size: 0.8rem !important;
-    }
-}
-
-/* Para escritorio */
-@media (min-width: 1025px) {
-    .container-nav-ul {
-        gap: 8px;
-        justify-content: center;
-    }
-    
-    .menu-item {
-        max-width: 140px;
-        min-height: 120px;
-        padding: 12px 8px !important;
-    }
-    
-    .menu-item svg {
-        width: 42px !important;
-        height: 42px !important;
-    }
-    
-    .menu-item span {
-        font-size: 0.85rem !important;
-    }
-}
-
-/* Asegurar que el nav no tenga scroll */
-nav.h-\[92px\] {
-    height: auto !important;
-    min-height: 110px;
-    display: flex;
-    align-items: center;
-    overflow: hidden !important;
-}
-
+/* Eliminar cualquier scroll */
+nav,
+.container-T,
 .svgicon {
-    width: 100%;
-    overflow: hidden;
-}
-
-.container-T {
     overflow: hidden !important;
 }
