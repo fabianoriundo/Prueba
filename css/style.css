@@ -753,72 +753,43 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Estilos específicos para que los 6 ítems estén en una fila en móviles */
+/* SOLUCIÓN: Eliminar scroll y distribuir 6 ítems */
 .container-nav-ul {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 10px 0;
-    margin: 0;
-    gap: 8px;
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
 }
 
-/* Ocultar scrollbar */
 .container-nav-ul::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
-.container-nav-ul {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Cada ítem ocupará un ancho específico para caber los 6 en pantalla */
 .container-nav-ul li {
-    flex: 0 0 auto;
-    width: calc(16.666% - 7px); /* 6 ítems en fila con espacio entre ellos */
+    flex: 1 0 auto;
     min-width: 0;
 }
 
-/* Para pantallas muy pequeñas (menos de 400px) */
-@media (max-width: 400px) {
-    .container-nav-ul li {
-        width: calc(16.666% - 6px);
-    }
-    
-    .container-nav-ul a {
-        padding: 8px 4px !important;
-        min-height: 85px;
-    }
-    
-    .container-nav-ul .h-12 {
-        height: 32px !important;
-    }
-    
-    .container-nav-ul svg {
-        width: 26px !important;
-        height: 26px !important;
-    }
-    
-    .container-nav-ul span {
-        font-size: 0.65rem !important;
-    }
+.container-nav-ul a {
+    width: 100% !important;
+    max-width: 85px;
 }
 
-/* Para pantallas pequeñas (400px - 480px) */
-@media (min-width: 401px) and (max-width: 480px) {
-    .container-nav-ul li {
-        width: calc(16.666% - 6.5px);
+/* Asegurar que el contenedor padre no cause scroll */
+nav, .svgicon, .container-T {
+    overflow: hidden !important;
+}
+
+/* Para pantallas móviles */
+@media (max-width: 768px) {
+    .container-nav-ul {
+        justify-content: space-between !important;
+        gap: 2px !important;
+        padding: 0 4px !important;
     }
     
     .container-nav-ul a {
-        padding: 10px 5px !important;
-        min-height: 90px;
-    }
-    
-    .container-nav-ul .h-12 {
-        height: 35px !important;
+        padding: 8px 2px !important;
+        min-height: 85px;
     }
     
     .container-nav-ul svg {
@@ -827,129 +798,6 @@ button:disabled {
     }
     
     .container-nav-ul span {
-        font-size: 0.7rem !important;
+        font-size: 0.65rem !important;
     }
-}
-
-/* Para tablets pequeñas (481px - 600px) */
-@media (min-width: 481px) and (max-width: 600px) {
-    .container-nav-ul li {
-        width: calc(16.666% - 7px);
-    }
-    
-    .container-nav-ul a {
-        padding: 12px 6px !important;
-        min-height: 95px;
-    }
-    
-    .container-nav-ul .h-12 {
-        height: 38px !important;
-    }
-    
-    .container-nav-ul svg {
-        width: 30px !important;
-        height: 30px !important;
-    }
-    
-    .container-nav-ul span {
-        font-size: 0.75rem !important;
-    }
-}
-
-/* Para tablets medianas (601px - 768px) */
-@media (min-width: 601px) and (max-width: 768px) {
-    .container-nav-ul li {
-        width: calc(16.666% - 7.5px);
-    }
-    
-    .container-nav-ul a {
-        padding: 14px 8px !important;
-        min-height: 100px;
-    }
-    
-    .container-nav-ul .h-12 {
-        height: 40px !important;
-    }
-    
-    .container-nav-ul svg {
-        width: 32px !important;
-        height: 32px !important;
-    }
-    
-    .container-nav-ul span {
-        font-size: 0.8rem !important;
-    }
-}
-
-/* Para tablets grandes y escritorio (más de 768px) */
-@media (min-width: 769px) {
-    .container-nav-ul {
-        justify-content: center;
-        overflow-x: visible;
-        gap: 12px;
-    }
-    
-    .container-nav-ul li {
-        width: auto;
-        flex: 0 0 auto;
-    }
-    
-    .container-nav-ul a {
-        width: 100px !important;
-        padding: 15px 10px !important;
-        min-height: 110px;
-    }
-    
-    .container-nav-ul .h-12 {
-        height: 45px !important;
-    }
-    
-    .container-nav-ul svg {
-        width: 35px !important;
-        height: 35px !important;
-    }
-    
-    .container-nav-ul span {
-        font-size: 0.85rem !important;
-    }
-}
-
-/* Para escritorio grande (más de 1024px) */
-@media (min-width: 1024px) {
-    .container-nav-ul a {
-        width: 120px !important;
-        min-height: 120px;
-    }
-    
-    .container-nav-ul svg {
-        width: 40px !important;
-        height: 40px !important;
-    }
-    
-    .container-nav-ul span {
-        font-size: 0.9rem !important;
-    }
-}
-
-/* Asegurar que los SVG mantengan sus proporciones */
-.container-nav-ul svg {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-/* Mejorar la apariencia del hover */
-.container-nav-ul a:hover {
-    background-color: #f7f7f7;
-    transform: translateY(-2px);
-    transition: all 0.2s ease;
-}
-
-/* Garantizar que el nav tenga altura suficiente */
-nav.h-\[92px\] {
-    height: auto !important;
-    min-height: 110px;
-    display: flex;
-    align-items: center;
 }
