@@ -1,6 +1,4 @@
-// navbar-new.js
-// Controlador del nuevo header mejorado para PC
-
+// navbar-new.js actualizado
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del DOM
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -15,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.querySelector('.search-form');
 
     // Verificar que los elementos existan
-    if (!mobileMenuBtn || !mobileMenu || !searchModal) {
+    if (!mobileMenuBtn || !mobileMenu) {
         console.warn('Algunos elementos del nuevo header no se encontraron');
         return;
     }
@@ -32,11 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         menuOverlay.addEventListener('click', closeMobileMenu);
     }
 
-    // Abrir modal de búsqueda
-    if (desktopSearchBtn) {
-        desktopSearchBtn.addEventListener('click', openSearchModal);
-    }
-    
+    // Solo abrir modal de búsqueda en móvil
     if (mobileSearchBtn) {
         mobileSearchBtn.addEventListener('click', openSearchModal);
     }
@@ -78,14 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function openSearchModal() {
-        searchModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        // Enfocar el input después de que se abra el modal
-        setTimeout(() => {
-            if (searchInput) {
-                searchInput.focus();
-            }
-        }, 300);
+        // Solo abrir en móvil
+        if (window.innerWidth < 1024) {
+            searchModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Enfocar el input después de que se abra el modal
+            setTimeout(() => {
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }, 300);
+        }
     }
 
     function closeSearchModal() {
@@ -109,42 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             closeMobileMenu();
-        });
-    });
-
-    // Añadir efecto de scroll al header
-    let lastScrollTop = 0;
-    const newHeader = document.querySelector('.new-header');
-    
-    if (newHeader) {
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down
-                newHeader.style.transform = 'translateY(-100%)';
-                newHeader.style.transition = 'transform 0.3s ease';
-            } else {
-                // Scrolling up
-                newHeader.style.transform = 'translateY(0)';
-            }
-            
-            lastScrollTop = scrollTop;
-        });
-    }
-
-    // Inicializar detalles (details elements)
-    const detailsElements = document.querySelectorAll('.menu-details');
-    detailsElements.forEach(details => {
-        details.addEventListener('toggle', function() {
-            if (this.open) {
-                // Cerrar otros detalles abiertos
-                detailsElements.forEach(otherDetails => {
-                    if (otherDetails !== this && otherDetails.open) {
-                        otherDetails.open = false;
-                    }
-                });
-            }
         });
     });
 

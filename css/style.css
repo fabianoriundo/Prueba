@@ -971,12 +971,12 @@ nav.h-\[92px\] {
 }
 
 .main-logo {
-    height: 50px;
+    height: 67px;
     width: auto;
 }
 
 .cisco-logo {
-    height: 40px;
+    height: 50px;
     width: auto;
 }
 
@@ -1106,7 +1106,7 @@ nav.h-\[92px\] {
 }
 
 .mobile-logo {
-    height: 80px;
+    height: 55px;
     width: auto;
 }
 
@@ -1589,5 +1589,301 @@ nav.h-\[92px\] {
     
     .search-icon-input {
         font-size: 1.125rem;
+    }
+}
+
+/* ============================================
+   HEADER PC - CON BUSCADOR EN EL CENTRO (como la imagen)
+   ============================================ */
+
+/* Contenedor principal del header desktop */
+.desktop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Logo izquierdo */
+.logo-section.left-logo {
+    flex-shrink: 0;
+    min-width: 150px;
+}
+
+.main-logo {
+    height: 67px;
+    width: auto;
+    max-height: 70px;
+}
+
+/* BUSCADOR EN EL CENTRO */
+.search-center-container {
+    flex: 1;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.search-form-desktop {
+    width: 100%;
+}
+
+.search-input-wrapper-desktop {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #3b82f6;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.15);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.search-input-wrapper-desktop:hover {
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+    border-color: #1d4ed8;
+}
+
+.search-icon-desktop {
+    color: #6b7280;
+    margin-right: 0.75rem;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.search-input-desktop {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem 0.25rem;
+    font-size: 0.95rem;
+    color: #374151;
+    background: transparent;
+    width: 100%;
+    min-width: 0;
+}
+
+.search-input-desktop::placeholder {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+/* BOTÓN BUSCAR - VERSIÓN CORREGIDA Y MEJORADA */
+.search-submit-desktop {
+    /* Asegurar que el texto sea visible y no se distorsione */
+    color: white !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    text-transform: none !important;
+    
+    /* Estilos de diseño */
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 0.6rem 1.5rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+    margin-left: 0.75rem !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    line-height: normal !important;
+    text-align: center !important;
+    min-height: 36px !important;
+    
+    /* Eliminar cualquier estilo problemático */
+    outline: none !important;
+    box-shadow: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    text-indent: 0 !important;
+    overflow: visible !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.search-submit-desktop:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3) !important;
+}
+
+/* INFORMACIÓN DE CONTACTO A LA DERECHA */
+.contact-info-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-shrink: 0;
+    min-width: 300px;
+    justify-content: flex-end;
+}
+
+.contact-main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-phone-item,
+.contact-email-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.contact-icon-small {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.phone-number,
+.email-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1f2937;
+    line-height: 1.2;
+}
+
+.email-text {
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+/* Logo Ubiquiti a la derecha */
+.right-logo-section {
+    flex-shrink: 0;
+}
+
+.ubiquiti-logo {
+    height: 55px;
+    width: auto;
+    max-height: 55px;
+    object-fit: contain;
+}
+
+/* ============================================
+   RESPONSIVE PARA PC
+   ============================================ */
+
+/* Para pantallas grandes */
+@media (min-width: 1400px) {
+    .search-center-container {
+        max-width: 550px;
+    }
+    
+    .contact-info-right {
+        min-width: 350px;
+    }
+}
+
+/* Para pantallas medianas de PC */
+@media (min-width: 1024px) and (max-width: 1300px) {
+    .desktop-header {
+        gap: 1.5rem;
+    }
+    
+    .search-center-container {
+        max-width: 450px;
+        min-width: 280px;
+    }
+    
+    .contact-info-right {
+        min-width: 280px;
+        gap: 1.5rem;
+    }
+    
+    .phone-number,
+    .email-text {
+        font-size: 0.85rem;
+    }
+    
+    .search-submit-desktop {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Para pantallas más pequeñas de PC */
+@media (min-width: 1024px) and (max-width: 1150px) {
+    .desktop-header {
+        gap: 1rem;
+    }
+    
+    .search-center-container {
+        max-width: 400px;
+        min-width: 250px;
+    }
+    
+    .contact-info-right {
+        min-width: 250px;
+        gap: 1rem;
+    }
+    
+    .contact-phone-item,
+    .contact-email-item {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+    }
+    
+    .contact-icon-small {
+        font-size: 0.8rem;
+    }
+    
+    .phone-number,
+    .email-text {
+        font-size: 0.8rem;
+    }
+    
+    .search-input-desktop {
+        font-size: 0.85rem;
+    }
+    
+    .search-submit-desktop {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Ocultar elementos no necesarios en desktop */
+@media (min-width: 1024px) {
+    .search-modal {
+        display: none !important;
+    }
+    
+    #desktop-search-btn,
+    .search-btn-desktop {
+        display: none !important;
+    }
+    
+    .cisco-logo {
+        display: none !important;
+    }
+}
+
+/* Mantener el botón de búsqueda en móvil */
+@media (max-width: 1023px) {
+    .search-center-container,
+    .search-container-desktop {
+        display: none !important;
+    }
+    
+    .desktop-header {
+        display: none !important;
     }
 }

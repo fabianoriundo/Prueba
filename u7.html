@@ -21,63 +21,60 @@
 </head>
 
 <body>
-    <!-- Banner de contacto y ofertas -->
-    <div class="contact-banner">
-        CONTACTENOS • OFERTAS!
-    </div>
-
     <!-- Nuevo Header Mejorado para PC -->
     <div class="new-header">
         <div class="header-container">
-            <!-- Desktop Version -->
+                        <!-- Desktop Version - CON BUSCADOR EN EL CENTRO -->
             <div class="desktop-header">
-                <!-- Logo y Marcas -->
-                <div class="logo-section">
+                <!-- Logo izquierdo -->
+                <div class="logo-section left-logo">
                     <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" 
                          alt="DS3 Comunicaciones" 
                          class="main-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Ubiquiti_Logo.png" 
-                         alt="Cisco" 
-                         class="cisco-logo">
                 </div>
 
-                <!-- Información de Contacto -->
-                <div class="contact-info-desktop">
-                    <!-- Teléfono 1 -->
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt contact-icon"></i>
-                        <div class="contact-text">
-                            <span class="main-number">533-4339</span>
-                            <span class="secondary-number">994-428-965</span>
+                <!-- BUSCADOR EN EL CENTRO -->
+                <div class="search-center-container">
+                    <form name="form1" method="get" action="https://www.ds3comunicaciones.com/find.html" 
+                          class="search-form-desktop" enctype="application/x-www-form-urlencoded">
+                        <div class="search-input-wrapper-desktop">
+                            <i class="fas fa-search search-icon-desktop"></i>
+                            <input name="q" type="text" class="search-input-desktop" placeholder="Buscar..." required>
+                            <input type="hidden" name="cx" value="partner-pub-9265252540298851:f2549i3fi60">
+                            <input type="hidden" name="cof" value="FORID:10">
+                            <input type="hidden" name="ie" value="ISO-8859-1">
+                            <input name="sa" type="submit" value="Buscar" class="search-submit-desktop">
                         </div>
-                    </div>
-
-                    <!-- Teléfono 2 -->
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt contact-icon"></i>
-                        <div class="contact-text">
-                            <span class="main-number">99653-3223</span>
-                            <span class="secondary-number">937-514-867</span>
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <span class="contact-email">netperu100@hotmail.com</span>
-                    </div>
-
-                    <!-- Ubicación -->
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <span class="contact-location">Lima, PERÚ</span>
-                    </div>
+                    </form>
                 </div>
 
-                <!-- Botón de Búsqueda -->
-                <button class="search-btn-desktop" id="desktop-search-btn">
-                    <i class="fas fa-search"></i>
-                </button>
+                <!-- Información de Contacto a la derecha -->
+                <div class="contact-info-right">
+                    <!-- Logo Ubiquiti a la derecha -->
+                    <div class="ubiquiti-logo-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Ubiquiti_Logo.png" 
+                             alt="Ubiquiti" 
+                             class="ubiquiti-logo">
+                    </div>
+                    <!-- Teléfonos y email -->
+                    <div class="contact-main-info">
+                        <div class="contact-numbers">
+                            <div class="contact-phone-item">
+                                <i class="fas fa-phone-alt contact-icon-small"></i>
+                                <span class="phone-number">994-428-965</span>
+                            </div>
+                            <div class="contact-phone-item">
+                                <i class="fas fa-phone-alt contact-icon-small"></i>
+                                <span class="phone-number">996-533-223</span>
+                            </div>
+                            <div class="contact-email-item">
+                                <i class="fas fa-envelope contact-icon-small"></i>
+                                <span class="email-text">netperu100@hotmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
             <!-- Mobile Version -->
