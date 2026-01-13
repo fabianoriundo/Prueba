@@ -1613,9 +1613,9 @@ nav.h-\[92px\] {
 }
 
 .main-logo {
-    height: 67px;
+    height: 77px;
     width: auto;
-    max-height: 70px;
+    max-height: 77px;
 }
 
 /* BUSCADOR EN EL CENTRO */
@@ -1628,6 +1628,7 @@ nav.h-\[92px\] {
 
 .search-form-desktop {
     width: 100%;
+    border-radius: 25px;
 }
 
 .search-input-wrapper-desktop {
@@ -1753,15 +1754,17 @@ nav.h-\[92px\] {
 
 .phone-number,
 .email-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #1f2937;
     line-height: 1.2;
+    font-weight: bold;
 }
 
 .email-text {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #4b5563;
+    font-weight: bold;
 }
 
 /* Logo Ubiquiti a la derecha */
@@ -1770,9 +1773,9 @@ nav.h-\[92px\] {
 }
 
 .ubiquiti-logo {
-    height: 55px;
+    height: 60px;
     width: auto;
-    max-height: 55px;
+    max-height: 60px;
     object-fit: contain;
 }
 
@@ -1886,4 +1889,69 @@ nav.h-\[92px\] {
     .desktop-header {
         display: none !important;
     }
+}
+/* ============================================
+   BUSCADOR MÁS DELGADO (solo segunda mejora)
+   ============================================ */
+
+/* Contenedor del buscador más delgado */
+.search-input-wrapper-desktop {
+    height: 44px; /* Altura reducida (original era 44px) */
+    padding: 0.4rem 1rem; /* Padding reducido verticalmente */
+    border: 1px solid #477ccb; /* Borde más delgado */
+    border-radius: 25px;
+}
+
+/* Input más compacto */
+.search-input-desktop {
+    padding: 0.3rem 0.25rem; /* Padding interno reducido */
+    font-size: 0.9rem; /* Texto ligeramente más pequeño */
+}
+
+/* Botón más compacto */
+.search-submit-desktop {
+    padding: 0.5rem 1.5rem !important; /* Padding reducido verticalmente */
+    min-height: 34px !important; /* Altura reducida */
+    height: 34px !important;
+    font-size: 0.85rem !important;
+}
+
+/* Icono más pequeño */
+.search-icon-desktop {
+    font-size: 0.9rem;
+    margin-right: 0.6rem;
+}
+
+/* Para pantallas más pequeñas */
+@media (min-width: 1024px) and (max-width: 1300px) {
+    .search-input-wrapper-desktop {
+        height: 40px;
+        padding: 0.35rem 0.9rem;
+    }
+    
+    .search-submit-desktop {
+        padding: 0.45rem 1.25rem !important;
+        min-height: 32px !important;
+        height: 32px !important;
+        font-size: 0.8rem !important;
+    }
+}
+.contact-header {
+    text-align: right;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.contact-title {
+    color: #1e293b;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.contact-subtitle {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
 }
