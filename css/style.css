@@ -1748,13 +1748,13 @@ nav.h-\[92px\] {
 
 .contact-icon-small {
     color: #3b82f6;
-    font-size: 0.9rem;
+    font-size: 1rem;
     flex-shrink: 0;
 }
 
 .phone-number,
 .email-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #1f2937;
     line-height: 1.2;
@@ -1762,8 +1762,8 @@ nav.h-\[92px\] {
 }
 
 .email-text {
-    font-size: 1rem;
-    color: #4b5563;
+    font-size: 1.1rem;
+    color: #1f2937;
     font-weight: bold;
 }
 
