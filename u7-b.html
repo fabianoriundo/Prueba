@@ -18,6 +18,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>U7-LITE Access Point Inalámbrico UniFi WiFi 7</title>
+    <!-- SDK de Facebook (añadir también en el head si prefieres) -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0">
+    </script>
 </head>
 
 <body>
@@ -960,6 +965,170 @@
         </div>
     </section>
 
+    <!-- ============================================
+         SECCIÓN DE PREGUNTAS FRECUENTES (FAQ)
+         ============================================ -->
+    <section class="faq-section mx-auto mt-10 mb-10" style="max-width: 90%; width: 900px">
+        <div class="border rounded-md p-5 bg-white shadow-sm">
+            <h2 class="text-2xl font-bold text-center mb-6 text-blue-600">
+                <i class="fas fa-question-circle mr-2"></i>
+                Preguntas Frecuentes sobre U7-LITE
+            </h2>
+            
+            <div class="faq-container">
+                <!-- Pregunta 1 -->
+                <div class="faq-item mb-4 border rounded-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center">
+                        <span class="font-medium text-gray-800">¿Qué velocidad máxima ofrece el U7-LITE?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        <p class="text-gray-700">
+                            El U7-LITE ofrece una velocidad agregada de <strong>5 Gbps</strong>:
+                            <br>• Hasta 1.2 Gbps en 2.4 GHz (802.11be)
+                            <br>• Hasta 3.8 Gbps en 5 GHz (802.11be)
+                            <br>• Puerto Ethernet 2.5 GbE para evitar cuellos de botella
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div class="faq-item mb-4 border rounded-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center">
+                        <span class="font-medium text-gray-800">¿Qué tipo de PoE necesita?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        <p class="text-gray-700">
+                            El U7-LITE se alimenta mediante <strong>PoE 802.3af/at</strong> (PoE+):
+                            <br>• Voltaje: 42.5-57V DC
+                            <br>• Consumo máximo: 13W
+                            <br>• Compatible con switches PoE estándar
+                            <br>• <span class="text-red-600 font-medium">NOTA:</span> No incluye inyector PoE, debe adquirirse por separado
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 3 -->
+                <div class="faq-item mb-4 border rounded-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center">
+                        <span class="font-medium text-gray-800">¿Cuántos dispositivos puede soportar simultáneamente?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        <p class="text-gray-700">
+                            El U7-LITE está diseñado para soportar <strong>más de 200 dispositivos</strong> conectados simultáneamente gracias a:
+                            <br>• Tecnología MU-MIMO (Multi-User MIMO)
+                            <br>• OFDMA para mayor eficiencia
+                            <br>• BSS Coloring para reducir interferencias
+                            <br>• Ideal para oficinas, hoteles y espacios con alta densidad de usuarios
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 4 -->
+                <div class="faq-item mb-4 border rounded-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center">
+                        <span class="font-medium text-gray-800">¿Es compatible con equipos anteriores (WiFi 5/WiFi 6)?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        <p class="text-gray-700">
+                            Sí, el U7-LITE es <strong>completamente retrocompatible</strong>:
+                            <br>• WiFi 7 (802.11be)
+                            <br>• WiFi 6/6E (802.11ax)
+                            <br>• WiFi 5 (802.11ac)
+                            <br>• WiFi 4 (802.11n)
+                            <br>Los dispositivos más antiguos funcionarán, pero solo obtendrán las ventajas completas con dispositivos WiFi 7.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 5 -->
+                <div class="faq-item mb-4 border rounded-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center">
+                        <span class="font-medium text-gray-800">¿Qué área cubre aproximadamente?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        <p class="text-gray-700">
+                            Cobertura estimada: <strong>115 m² (1,250 pies²)</strong>
+                            <br>• Interiores: Oficinas, departamentos, casas
+                            <br>• Potencia de transmisión: 23 dBm (2.4 GHz) / 24 dBm (5 GHz)
+                            <br>• Antenas: 4 dBi (2.4 GHz) / 5 dBi (5 GHz)
+                            <br>• Para áreas mayores, recomendamos múltiples AP o el modelo U7-LR
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Formulario para nuevas preguntas -->
+                <div class="new-question mt-8 p-6 border border-blue-200 rounded-lg bg-blue-50">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">
+                        <i class="fas fa-comment-question mr-2"></i>
+                        ¿Tienes otra pregunta sobre el U7-LITE?
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Envíanos tu consulta y nuestro equipo técnico te responderá en menos de 24 horas.
+                    </p>
+                    <form id="question-form" class="space-y-4">
+                        <div>
+                            <textarea 
+                                id="user-question" 
+                                placeholder="Ejemplo: ¿Qué switch PoE recomiendan para el U7-LITE? ¿Se puede usar en exteriores? ¿Requiere controlador UniFi?"
+                                rows="4"
+                                class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                required
+                            ></textarea>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button 
+                                type="button" 
+                                onclick="window.open('https://wa.me/994428965?text=Hola, tengo una pregunta sobre el U7-LITE', '_blank')"
+                                class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-md transition duration-200 flex items-center justify-center gap-2"
+                            >
+                                <i class="fab fa-whatsapp"></i>
+                                Consultar por WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PLUGIN DE COMENTARIOS DE FACEBOOK
+         ============================================ -->
+    <section class="fb-comments-section mx-auto mb-10" style="max-width: 90%; width: 900px">
+        <div class="border rounded-md p-5 bg-white shadow-sm">
+            <h3 class="text-2xl font-bold text-center mb-6 text-blue-700">
+                <i class="fab fa-facebook mr-2"></i>
+                Comentarios y Opiniones sobre el U7-LITE
+            </h3>
+            <p class="text-center text-gray-600 mb-6">
+                Comparte tu experiencia, haz preguntas o lee lo que otros usuarios comentan sobre este producto.
+            </p>
+            
+            <!-- Contenedor del plugin de Facebook -->
+            <div class="fb-comments-container">
+                <div class="fb-comments" 
+                     data-href="https://www.ds3comunicaciones.com/ubiquiti/unifi/U7-LITE.html" 
+                     data-width="100%" 
+                     data-numposts="5"
+                     data-order-by="reverse_time"
+                     data-colorscheme="light">
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 bg-gray-50 rounded-md border">
+                <p class="text-sm text-gray-600 text-center">
+                    <i class="fas fa-info-circle mr-1"></i>
+                    Los comentarios se sincronizan con Facebook. Para comentar necesitas iniciar sesión con tu cuenta de Facebook.
+                </p>
+            </div>
+        </div>
+    </section>
+
 
     <footer class="px-5 py-7 text-sm w-full" style="background-color: #e9e9e9; font-family: 'Noto Sans', sans-serif">
     <div class="ff max-w-90 mx-auto px-5 cc-footer flex justify-between flex-wrap gap-2">
@@ -1052,6 +1221,7 @@
     <script src="js/nav.js"></script>
     <script src="js/simple-image-modal.js"></script>
     <script src="js/navbar-new.js"></script>
+    <script src="js/preguntas.js"></script>
 </body>
 
 </html>
