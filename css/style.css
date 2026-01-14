@@ -895,6 +895,10 @@ button:disabled {
     font-size: 0.9rem;
   }
 }
+.font-size1 {
+  font-size: 21.5px !important;
+  font-weight: 760;
+}
 
 /* Para escritorio grande */
 @media (min-width: 1280px) {
@@ -2084,4 +2088,457 @@ nav.h-\[92px\] {
     .faq-section .new-question button {
         width: 100%;
     }
+}
+/* Estilos para el formulario de WhatsApp */
+.question-textarea {
+    transition: all 0.3s ease;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.question-textarea:focus {
+    border-color: #10b981 !important; /* Verde de WhatsApp */
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+/* Contador de caracteres */
+#char-count {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+}
+
+/* Botón de WhatsApp con mejor feedback */
+#whatsapp-question-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+#whatsapp-question-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+#whatsapp-question-btn:not(:disabled):active {
+    transform: translateY(0);
+}
+
+/* Animación de loading para el botón */
+#whatsapp-question-btn.loading {
+    cursor: wait;
+}
+
+#whatsapp-question-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Mensajes de error/éxito */
+.form-error-message,
+.form-success-message {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Placeholder más descriptivo */
+.question-textarea::placeholder {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* Para móviles */
+@media (max-width: 640px) {
+    .new-question {
+        padding: 1.5rem !important;
+    }
+    
+    .question-textarea {
+        font-size: 16px; /* Evitar zoom en iOS */
+    }
+    
+    #whatsapp-question-btn,
+    .new-question button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* ============================================
+   ESTILOS MEJORADOS PARA SECCIÓN DE MARCAS
+   ============================================ */
+
+/* Contenedor principal */
+.list-left {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+
+.brands-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 220px;
+    margin-left: 10px;
+}
+
+/* Encabezado */
+.brands-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.brands-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands-title i {
+    color: #3b82f6;
+}
+
+.brands-subtitle {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Grid de marcas */
+.brands-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 5px;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.brands-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.brands-grid::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.brands-grid::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.brands-grid::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Tarjeta de marca */
+.brand-card {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.brand-card:hover {
+    background: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.15);
+}
+
+.brand-card:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+
+/* Contenedor del logo */
+.brand-logo-container {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover .brand-logo {
+    transform: scale(1.05);
+}
+
+/* Nombre de la marca */
+.brand-name {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1f2937;
+    transition: color 0.3s ease;
+}
+
+.brand-card:hover .brand-name {
+    color: #3b82f6;
+}
+
+/* Efecto hover */
+.brand-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(29, 78, 216, 0.95) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+.brand-card:hover .brand-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.brand-hover-text {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.brand-hover i {
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Pie de página */
+.brands-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.brands-tip {
+    font-size: 0.8rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.brands-tip i {
+    color: #3b82f6;
+    font-size: 0.9rem;
+}
+
+/* Indicador de clic (pulso) */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(59, 130, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+.brand-card:first-child {
+    animation: pulse 2s infinite;
+}
+
+/* Indicador visual para todas las tarjetas */
+.brand-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.brand-card:hover::before {
+    opacity: 1;
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 1000px) {
+    .list-left {
+        display: none;
+    }
+    
+    .brands-section {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    
+    .brands-grid {
+        max-height: 400px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .brand-card {
+        width: 140px;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    
+    .brand-logo-container {
+        width: 80px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .brand-name {
+        font-size: 0.9rem;
+    }
+    
+    .brand-hover-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .brands-section {
+        width: 180px;
+        padding: 15px;
+    }
+    
+    .brand-card {
+        padding: 10px 12px;
+    }
+    
+    .brand-logo-container {
+        width: 50px;
+        margin-right: 12px;
+    }
+    
+    .brand-name {
+        font-size: 0.85rem;
+    }
+    
+    .brands-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Efecto de carga suave para logos */
+.brand-logo {
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.brand-card:hover .brand-logo {
+    opacity: 1;
+}
+
+/* Borde animado */
+.brand-card::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 9px;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.brand-card:hover::after {
+    opacity: 1;
+    animation: borderAnimation 2s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mejorar el indicador de scroll */
+.brands-grid:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to top, white, transparent);
+    pointer-events: none;
+    border-radius: 0 0 10px 10px;
 }
