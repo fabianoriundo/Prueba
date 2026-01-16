@@ -23,11 +23,11 @@ const mainImages = [
 
 const galleryImages = [
     'https://www.ds3comunicaciones.com/ubiquiti/images//U7-LITE_front_face.png',
-    'img/u7-lite-01.png', 
+    'img/u7-lite_side.png', 
     'https://www.ds3comunicaciones.com/ubiquiti/images/U7-LITE_back.png',
-    'img/box.png',
+    'img/u7-lite_box2.png',
     'https://www.ds3comunicaciones.com/ubiquiti/images/U7-LITE_back_2b.jpg',
-    'img/box-u7-lite.png'
+    'img/u7-lite_box.png'
 ];
 
 let currentImages = galleryImages; // Por defecto
