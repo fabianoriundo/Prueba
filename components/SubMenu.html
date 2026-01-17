@@ -4,10 +4,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script src="https://cdn.tailwindcss.com"></script> 
   <title>Document</title>
+  <style>
+  /* SOLO para desktop (≥ 768px) */
+  @media (min-width: 768px) {
+    /* Fuerza máxima */
+    html body nav {
+      height: 82px !important;
+      max-height: 82px !important;
+      min-height: 82px !important;
+    }
+    
+    /* Reducir iconos proporcionalmente */
+    .svgicon svg {
+      height: 36px !important;
+      width: auto !important;
+    }
+    
+    /* Reducir texto */
+    .svgicon a {
+      font-size: 0.8rem !important;
+      margin-top: 0px !important;
+      padding-top: 0 !important;
+    }
+    
+    /* Reducir contenedor de iconos */
+    .liW > div {
+      height: 40px !important;
+      min-height: 40px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Ajustar padding */
+    .liW {
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+    }
+    
+    /* Centrar verticalmente todo */
+    .svgicon,
+    .container-nav-ul {
+      height: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+  }
+</style>
 </head>
 
 <body>
