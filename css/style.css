@@ -2542,3 +2542,152 @@ nav.h-\[92px\] {
     pointer-events: none;
     border-radius: 0 0 10px 10px;
 }
+
+/* =========================================
+   HEADER ESTILO IMAGEN (SOLO PC)
+   ========================================= */
+
+.ds3-header-wrapper {
+    background-color: #ffffff;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 0;
+    display: block; /* Visible por defecto en PC */
+}
+
+.ds3-header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 80px; 
+}
+
+/* --- SECCIÓN LOGOS (IZQUIERDA) --- */
+.ds3-logos-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-ds3 {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-ubiquiti {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* --- SECCIÓN INFO (DERECHA) --- */
+.ds3-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Fila de Contacto */
+.ds3-contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    margin-left: 42px; 
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.contact-item i {
+    color: #2563eb;
+    font-size: 14px;
+}
+
+.sep {
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* Fila de Buscador */
+.ds3-search-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 50px;
+    padding: 5px 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-form:hover, 
+.search-form:focus-within {
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+    border-color: #2563eb;
+}
+
+.search-icon-left {
+    color: #9ca3af;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.search-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #4b5563;
+    background: transparent;
+    padding: 8px 0;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2563eb;
+    font-size: 16px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =======================================================
+   REGLA DE VISIBILIDAD (AQUÍ ESTÁ LA MAGIA)
+   ======================================================= */
+
+/* Si la pantalla es menor a 992px (Móviles y Tablets verticales), 
+   OCULTAMOS completamente este header de PC */
+@media (max-width: 1024px) {
+    .ds3-header-wrapper {
+        display: none !important;
+    }
+}

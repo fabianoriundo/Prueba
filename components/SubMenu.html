@@ -7,46 +7,84 @@
   <script src="https://cdn.tailwindcss.com"></script> 
   <title>Document</title>
   <style>
+  /* ELIMINAR BARRAS EN TODOS LOS DISPOSITIVOS */
+  
+  /* 1. Para móvil (≤ 767px) - mantener overflow original */
+  @media (max-width: 767px) {
+    /* No hacemos nada, mantiene overflow-hidden del HTML */
+  }
+  
+  /* 2. Para tablet/desktop pequeño (768px - 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    html body nav {
+      height: 78px !important;
+      overflow: visible !important;
+      overflow-x: clip !important;
+    }
+    
+    /* Asegurar que no haya scroll en contenedores hijos */
+    .container-nav-ul,
+    .svgicon {
+      overflow: visible !important;
+      max-height: none !important;
+    }
+    
+    .svgicon svg {
+      height: 34px !important;
+    }
+    
+    .svgicon a {
+      font-size: 0.75rem !important;
+    }
+    
+    .liW > div {
+      height: 38px !important;
+    }
+  }
+  
+  /* 3. Para desktop grande (≥ 1024px) */
   @media (min-width: 1024px) {
-    /* Fuerza máxima */
     html body nav {
       height: 82px !important;
-      max-height: 82px !important;
-      min-height: 82px !important;
+      overflow: visible !important;
+      overflow-x: clip !important;
     }
     
-    /* Reducir iconos proporcionalmente */
     .svgicon svg {
       height: 36px !important;
-      width: auto !important;
     }
     
-    /* Reducir texto */
     .svgicon a {
       font-size: 0.8rem !important;
-      margin-top: 0px !important;
-      padding-top: 0 !important;
     }
     
-    /* Reducir contenedor de iconos */
     .liW > div {
       height: 40px !important;
-      min-height: 40px !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    }
+  }
+  
+  /* 4. Estilos COMUNES para tablet y desktop (≥ 768px) */
+  @media (min-width: 768px) {
+    /* Forzar eliminación de overflow en todos los niveles */
+    nav {
+      overflow: visible !important;
     }
     
-    /* Ajustar padding */
+    .container-nav-ul,
+    .svgicon {
+      overflow: visible !important;
+      max-height: none !important;
+      height: 100% !important;
+    }
+    
     .liW {
       padding-top: 6px !important;
       padding-bottom: 6px !important;
+      overflow: visible !important;
     }
     
-    /* Centrar verticalmente todo */
     .svgicon,
     .container-nav-ul {
-      height: 100% !important;
       display: flex !important;
       align-items: center !important;
     }
