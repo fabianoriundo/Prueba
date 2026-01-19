@@ -2603,7 +2603,7 @@ nav.h-\[92px\] {
     justify-content: flex-start;
     align-items: center;
     gap: 8px;
-    font-size: 13px;
+    font-size: 16px;
     color: #333;
     font-weight: 500;
     margin-left: 42px; 
@@ -2665,7 +2665,7 @@ nav.h-\[92px\] {
     font-size: 14px;
     color: #4b5563;
     background: transparent;
-    padding: 8px 0;
+    padding: 5px 0;
 }
 
 .search-btn {
