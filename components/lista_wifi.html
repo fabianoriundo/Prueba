@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Precios</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        /* Reseteo para el iframe */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: transparent; 
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        /* Ocultar barras de scroll */
+        body::-webkit-scrollbar { display: none; }
+        
+        /* Estilos específicos copiados de tu CSS original para asegurar consistencia */
+        .brands-header {
+            text-align: center;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3b82f6;
+        }
+        
+        .brands-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        /* Ajuste fino para los enlaces */
+        ul li { margin-bottom: 4px; }
+        a:hover { color: #2563eb; }
+    </style>
+
+    <base target="_parent">
+</head>
+<body>
+
+    <div class="p-5 border rounded-md bg-white text-sm w-[190px]">
+        <p class="brands-header brands-title">
+            Lista de precios
+        </p>
+        <ul class="text-sm text-slate-600" style="font-size: 13px">
+            <li><a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html" class="hover:underline">Lista de precios AMP</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html"  class="hover:underline">Lista de precios Amphenol</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/andrew/precios_andrew.html"  class="hover:underline">Lista de precios Andrew</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/apc/precios_apc.html"  class="hover:underline">Lista de precios APC</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/cisco/precios_cisco.html"  class="hover:underline">Lista de precios CISCO</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/dlink/precios_dlink.html"  class="hover:underline">Lista de precios D-Link</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/dixon/precios_dixon.html"  class="hover:underline">Lista de precios Dixon</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/Energit/precios_energit.html"  class="hover:underline">Lista de precios Energit</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/FibreFab/precios_fibrefab.html"  class="hover:underline">Lista de precios Fibra</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/hp/precios_hp.html"  class="hover:underline">Lista de precios HP</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html"  class="hover:underline">Lista de precios Mikrotik</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/nexxt_solutions/precios_nexxt_solutions.html"  class="hover:underline">Lista de precios Nexxt Solutions</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/panduit/precios_panduit.html"  class="hover:underline">Lista de precios Panduit</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/siemon/precios_siemon.html"  class="hover:underline">Lista de precios Siemon</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/Teldor/precios_teldor.html"  class="hover:underline">Lista de precios Teldor</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/trendnet/precios_trendnet.html" class="hover:underline">Lista de precios TRENDnet</a></li>
+            <li class="mb-0"><a href="https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html"  class="hover:underline">Lista de precios Ubiquiti</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

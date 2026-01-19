@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <base target="_parent">
+
+    <style>
+        /* Reseteo básico para el iframe */
+        body { margin: 0; padding: 0; background: transparent; font-family: 'Roboto', sans-serif; }
+        
+        /* Ocultar barra de scroll vertical del iframe, dejar que el contenido mande */
+        body::-webkit-scrollbar { display: none; }
+
+        /* TUS CLASES ORIGINALES PARA LAS TARJETAS */
+        .info {
+            padding: 0;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .card:hover > div .info {
+            display: inline;
+            background-color: #fff;
+            height: auto;
+            padding: 0 20px 20px 20px;
+        }
+
+        .info-li {
+            margin-left: -21px;
+        }
+
+        /* ESTA ES LA REGLA MÁGICA PARA EL CELULAR QUE YA TENÍAS */
+        @media (max-width: 684px) {
+            .container-T {
+                overflow-x: scroll; /* Scroll horizontal */
+                width: 100% !important;
+                flex-wrap: nowrap !important; /* Una sola linea */
+                justify-content: start !important;
+                padding-bottom: 10px; /* Espacio para el dedo */
+            }
+        }
+    </style>
+</head>
+
+<body class="text-sm text-slate-600">
+
+    <div class="mt-5 flex flex-wrap justify-center pb-10">
+        <div class="flex gap-5 container-T flex-wrap justify-center flex-wrap h-full">
+
+            <a href="http://127.0.0.1:5502/U7-lite-b.html"
+                    class="cursor-pointer border-l border-t border-r shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3"> <img
+                            src="https://www.ds3comunicaciones.com/ubiquiti/images//U7-LITE_front_face.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold"> U7-Lite </h3> <span class="font-medium">$153.90 +
+                            IGV</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
+                            U7-LITE: Access Point WiFi 7 Dual Band, MIMO 2.4 GHz 2x2, 5 GHz 2x2 MU-MIMO, 802.11be, velocidad agregada 4.3 Gbps, potencia 24 dBm, 
+                            01 puerto Ethernet 2.5 GbE, soporta PoE, UBiQUiTi.  
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-lr_side.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-LR
+                        </h3>
+                        <span class="font-medium">$249.00 + IGV</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md ">
+                            U7-LR: Access Point WiFi 7 Dual Band, MIMO 2.4 GHz 2x2, 5 GHz 3x3 MU-MIMO, 802.11be, velocidad agregada 4.3 Gbps, potencia 27 dBm, 
+                            01 puerto Ethernet 2.5 GbE, soporta PoE, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-pro_front.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-PRO
+                        </h3>
+                        <span class="font-medium">$277.00 + IGV</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
+                            U7-PRO: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 2x2, 6 GHz 2x2 MU-MIMO, 802.11be, velocidad 
+                            agregada 9.3 Gbps, potencia 26 dBm, 01 puerto Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-pro-wall_front.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-PRO-WALL
+                        </h3>
+                        <span class="font-medium">$305.00 </span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md ">
+                            U7-PRO-WALL: Access Point WiFi 7 para pared, Tri Band 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 2x2, 6 GHz 2x2 MU-MIMO, 
+                            802.11be, velocidad agregada 9.3 Gbps, potencia 23 dBm, 01 puerto Ethernet 2.5 GbE, diseño de perfil ultra-delgado, soporta PoE+ 802.3 at, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-pro-xg_front.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-PRO-XG
+                        </h3>
+                        <span class="font-medium">$299.00</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
+                            U7-PRO-XG: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
+                            10 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-pro-xgs_side.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-PRO-XGS
+                        </h3>
+                        <span class="font-medium">$499.00</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
+                            U7-PRO-XGS: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
+                            10 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-outdoor_front.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-OUTDOOR
+                        </h3>
+                        <span class="font-medium">$309.90</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md ">
+                            U7-OUTDOOR: Access Point WiFi 7 Dual Band para exteriores(Outdoor), MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
+                            4.3 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, IPX6, montaje pared o poste, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-pro-outdoor_side.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-PRO-OUTDOOR
+                        </h3>
+                        <span class="font-medium">$439.90</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
+                            U7-PRO-OUTDOOR: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz para exteriores(Outdoor), MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
+                            5.8 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, IPX6/IP67, montaje pared o poste, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u7-pro-max_front.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U7-PRO-MAX
+                        </h3>
+                        <span class="font-medium">$429.00</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
+                            U7-PRO-MAX: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
+                            15.1 Gbps, potencia 29 dBm, 01 puerto Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+                <a href=""
+                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
+                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
+                        <img src="../img/u6-plus_side.png" alt=""
+                            class="object-cover w-[170px]" />
+                    </div>
+                    <div class="w-full flex justify-between border-t pt-4">
+                        <h3 class="text-slate-600 font-bold">
+                            U6+
+                        </h3>
+                        <span class="font-medium">$153.90 + IGV</span>
+                    </div>
+                    <div class="relative w-[210px] h-full info-li ">
+                        <p
+                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
+                            U6+: Access Point WiFi 6 de doble banda, 2.4 GHz/ 5 GHz, dual-radio, MIMO 2.4 GHz 2x2, 5 GHz 2x2 MU-MIMO, 802.11ax,
+                            velocidad agregada 3.0 Gbps, potencia 23 dBm, 01 puerto Ethernet Gigabit, soporta PoE 802.3 af, UBiQUiTi.
+                        </p>
+                    </div>
+                </a>
+
+        </div>
+    </div>
+</body>
+</html>

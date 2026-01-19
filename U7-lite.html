@@ -893,81 +893,28 @@
             </div>
         </div>
         <div class="h-auto mt-20 pt-10 list-right">
-            <div class="p-5 border rounded-md bg-white text-sm w-[190px]">
-                <p class="brands-header brands-title" style="font-size: 15px; padding-bottom: 5px">
-                    Lista de precios
-                </p>
-                <ul class="text-sm" style="font-size: 13px">
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html" target="_blank"
-                            class="hover:underline">Lista de precios AMP</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html" target="_blank"
-                            class="hover:underline">Lista de precios Amphenol</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/andrew/precios_andrew.html" target="_blank"
-                            class="hover:underline">Lista de precios Andrew</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/apc/precios_apc.html" target="_blank"
-                            class="hover:underline">Lista de precios APC</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco.html" target="_blank"
-                            class="hover:underline">Lista de precios CISCO</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/dlink/precios_dlink.html" target="_blank"
-                            class="hover:underline">Lista de precios D-Link</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/dixon/precios_dixon.html" target="_blank"
-                            class="hover:underline">Lista de precios Dixon</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/Energit/precios_energit.html" target="_blank"
-                            class="hover:underline">Lista de precios Energit</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/FibreFab/precios_fibrefab.html" target="_blank"
-                            class="hover:underline">Lista de precios Fibra</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/hp/precios_hp.html" target="_blank"
-                            class="hover:underline">Lista de precios HP</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html" target="_blank"
-                            class="hover:underline">Lista de precios Mikrotik</a>
-                    </li>
-                    <li class="">
-                        <a href="https://www.ds3comunicaciones.com/nexxt_solutions/precios_nexxt_solutions.html"
-                            target="_blank" class="hover:underline">Lista de precios Nexxt Solutions</a>
-                    </li>
-                    <li class="mb-1">
-                        <a href="https://www.ds3comunicaciones.com/panduit/precios_panduit.html" target="_blank"
-                            class="hover:underline">Lista de precios Panduit</a>
-                    </li>
-                    <li class="mb-1">
-                        <a href="https://www.ds3comunicaciones.com/siemon/precios_siemon.html" target="_blank"
-                            class="hover:underline">Lista de precios Siemon</a>
-                    </li>
-                    <li class="mb-1">
-                        <a href="https://www.ds3comunicaciones.com/Teldor/precios_teldor.html" target="_blank"
-                            class="hover:underline">Lista de precios Teldor</a>
-                    </li>
-                    <li class="mb-1">
-                        <a href="https://www.ds3comunicaciones.com/trendnet/precios_trendnet.html" target="_blank"
-                            class="hover:underline">Lista de precios TRENDnet</a>
-                    </li>
-                    <li class="mb-1">
-                        <a href="https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html" target="_blank"
-                            class="hover:underline">Lista de precios Ubiquiti</a>
-                    </li>
-                </ul>
-            </div>
+            <iframe 
+                id="priceFrame"
+                src="components/lista_wifi.html" 
+                frameborder="0" 
+                scrolling="no"
+                style="width: 195px; border: none; overflow: hidden;"
+                title="Lista de precios">
+            </iframe>
+
+            <script>
+                const priceIframe = document.getElementById('priceFrame');
+                
+                function resizePriceFrame() {
+                    if(priceIframe && priceIframe.contentWindow && priceIframe.contentWindow.document.body) {
+                        priceIframe.style.height = (priceIframe.contentWindow.document.body.scrollHeight + 10) + 'px';
+                    }
+                }
+
+                // Ejecutar al cargar y al redimensionar ventana
+                priceIframe.onload = resizePriceFrame;
+                window.addEventListener('resize', resizePriceFrame);
+            </script>
         </div>
     </main>
 
@@ -1007,214 +954,41 @@
 
     <section class="product mb-5 border-t mt-5 text-sm text-slate-600 mx-auto mb-5"
         style="max-width: 90%; width: 900px">
+        
         <div>
             <p class="text-center font-medium text-xl text-white bg-blue-600 p-5 rounded-md">
                 También Disponible en stock
             </p>
         </div>
-        <div class="mt-5 flex flex-wrap justify-center pb-10">
-            <div class="flex gap-5 container-T flex-wrap justify-center flex-wrap h-full">
 
-                <a href=""
-                    class="cursor-pointer border-l border-t border-r shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3"> <img
-                            src="https://www.ds3comunicaciones.com/ubiquiti/images//U7-LITE_front_face.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold"> U7-Lite </h3> <span class="font-medium">$153.90 +
-                            IGV</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
-                            U7-LITE: Access Point WiFi 7 Dual Band, MIMO 2.4 GHz 2x2, 5 GHz 2x2 MU-MIMO, 802.11be, velocidad agregada 4.3 Gbps, potencia 24 dBm, 
-                            01 puerto Ethernet 2.5 GbE, soporta PoE, UBiQUiTi.  
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-lr_side.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-LR
-                        </h3>
-                        <span class="font-medium">$249.00 + IGV</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md ">
-                            U7-LR: Access Point WiFi 7 Dual Band, MIMO 2.4 GHz 2x2, 5 GHz 3x3 MU-MIMO, 802.11be, velocidad agregada 4.3 Gbps, potencia 27 dBm, 
-                            01 puerto Ethernet 2.5 GbE, soporta PoE, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-pro_front.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-PRO
-                        </h3>
-                        <span class="font-medium">$277.00 + IGV</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
-                            U7-PRO: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 2x2, 6 GHz 2x2 MU-MIMO, 802.11be, velocidad 
-                            agregada 9.3 Gbps, potencia 26 dBm, 01 puerto Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-pro-wall_front.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-PRO-WALL
-                        </h3>
-                        <span class="font-medium">$305.00 </span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md ">
-                            U7-PRO-WALL: Access Point WiFi 7 para pared, Tri Band 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 2x2, 6 GHz 2x2 MU-MIMO, 
-                            802.11be, velocidad agregada 9.3 Gbps, potencia 23 dBm, 01 puerto Ethernet 2.5 GbE, diseño de perfil ultra-delgado, soporta PoE+ 802.3 at, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-pro-xg_front.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-PRO-XG
-                        </h3>
-                        <span class="font-medium">$299.00</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
-                            U7-PRO-XG: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
-                            10 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-pro-xgs_side.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-PRO-XGS
-                        </h3>
-                        <span class="font-medium">$499.00</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
-                            U7-PRO-XGS: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
-                            10 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-outdoor_front.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-OUTDOOR
-                        </h3>
-                        <span class="font-medium">$309.90</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md ">
-                            U7-OUTDOOR: Access Point WiFi 7 Dual Band para exteriores(Outdoor), MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
-                            4.3 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, IPX6, montaje pared o poste, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-pro-outdoor_side.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-PRO-OUTDOOR
-                        </h3>
-                        <span class="font-medium">$439.90</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
-                            U7-PRO-OUTDOOR: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz para exteriores(Outdoor), MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
-                            5.8 Gbps, potencia 26 dBm, 01 puerto 10G Ethernet 2.5 GbE, soporta PoE+ 802.3 at, IPX6/IP67, montaje pared o poste, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u7-pro-max_front.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U7-PRO-MAX
-                        </h3>
-                        <span class="font-medium">$429.00</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
-                            U7-PRO-MAX: Access Point WiFi 7 Tri Band, 2.4 GHz/ 5 GHz/ 6 GHz, MIMO 2.4 GHz 2x2, 5 GHz 4x4, 6 GHz 4x4 MU-MIMO, 802.11be, velocidad agregada 
-                            15.1 Gbps, potencia 29 dBm, 01 puerto Ethernet 2.5 GbE, soporta PoE+ 802.3 at, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-                <a href=""
-                    class="cursor-pointer border shadow-md w-[210px] h-full p-5 flex flex-col gap-3 rounded-md hover:border-blue-500 card no-underline">
-                    <div class="w-[170px] h-[150px] flex items-center justify-center mb-3">
-                        <img src="img/u6-plus_side.png" alt=""
-                            class="object-cover w-[170px]" />
-                    </div>
-                    <div class="w-full flex justify-between border-t pt-4">
-                        <h3 class="text-slate-600 font-bold">
-                            U6+
-                        </h3>
-                        <span class="font-medium">$153.90 + IGV</span>
-                    </div>
-                    <div class="relative w-[210px] h-full info-li ">
-                        <p
-                            class="absolute shadow-lg text-xs info border-l border-b border-r border-blue-500 rounded-b-md">
-                            U6+: Access Point WiFi 6 de doble banda, 2.4 GHz/ 5 GHz, dual-radio, MIMO 2.4 GHz 2x2, 5 GHz 2x2 MU-MIMO, 802.11ax,
-                            velocidad agregada 3.0 Gbps, potencia 23 dBm, 01 puerto Ethernet Gigabit, soporta PoE 802.3 af, UBiQUiTi.
-                        </p>
-                    </div>
-                </a>
-            </div>
+        <div class="mt-5 w-full">
+            <iframe 
+                id="stockFrame"
+                src="components/lista_u7.html" 
+                frameborder="0" 
+                class="w-full" 
+                scrolling="no"
+                title="Productos disponibles en stock">
+            </iframe>
         </div>
+
+        <script>
+            const iframe = document.getElementById('stockFrame');
+            
+            function resizeIframe() {
+                if(iframe && iframe.contentWindow && iframe.contentWindow.document.body) {
+                    // Ajusta la altura al contenido real + un pequeño margen
+                    iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 20) + 'px';
+                }
+            }
+
+            // Se ejecuta al cargar
+            iframe.onload = resizeIframe;
+            
+            // Se ejecuta al cambiar el tamaño de la ventana (girar celular o cambiar tamaño PC)
+            window.addEventListener('resize', resizeIframe);
+        </script>
+
     </section>
 
     <!-- ============================================
