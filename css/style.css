@@ -2691,3 +2691,8 @@ nav.h-\[92px\] {
         display: none !important;
     }
 }
+
+.text-sm1 {
+  font-size: 15px;
+  line-height: 1.25rem;
+}
